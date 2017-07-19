@@ -1,21 +1,22 @@
 {
-  "name": "vuejs-datepicker",
-  "version": "0.9.1",
-  "description": "A simple Vue.js datepicker component. Supports disabling of dates, inline mode, translations",
+  "name": "vuejs-datepicker-gyro",
+  "version": "0.9.2",
+  "description": "A simple Vue.js datepicker component. Supports disabling of dates, inline mode, translations. Modified by Gyro to meet internal needs.",
   "keywords": [
     "vue",
     "datepicker",
     "date-picker",
-    "calendar"
+    "calendar",
+    "gyro"
   ],
   "main": "dist/build.js",
-  "author": "Charlie Kassel <ck@charliekassel.com>",
+  "author": "Matt Mathias <mmathias01@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/charliekassel/vuejs-datepicker"
+    "url": "https://github.com/mmathias01/vuejs-datepicker-gyro"
   },
   "bugs": {
-    "url": "https://github.com/charliekassel/vuejs-datepicker/issues"
+    "url": "https://github.com/mmathias01/vuejs-datepicker-gyro/issues"
   },
   "private": false,
   "license": "MIT",
