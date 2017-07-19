@@ -70,6 +70,13 @@
       <code>
           &lt;datepicker language="{{ language }}"&gt;&lt;/datepicker&gt;
       </code>
+
+      <h5>{{ languages[language].language }} datepicker - custom translation</h5>
+
+      <datepicker :language="language" format="d MMMM yyyy" :customTranslations="customTranslations"></datepicker>
+      <code>
+        &lt;datepicker :language="{{ language }}" :customTranslations="{{customTranslations}}" &gt;&lt;/datepicker&gt;
+      </code>
       <div class="settings">
         <h5>Settings</h5>
         <select v-model="language">
@@ -110,7 +117,21 @@ export default {
       state: state,
       language: 'en',
       languages: DateLanguages.translations,
-      vModelExample: null
+      vModelExample: null,
+      customTranslations: {
+        'de': {
+          'months': {
+            'abbr': ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez']
+          },
+          'days': ['So.', 'Mo.', 'Di.', 'Mi.', 'Do.', 'Fr.', 'Sa.']
+        },
+        'en': {
+          'months': {
+            'abbr': ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+          },
+          'days': ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+        }
+      }
     }
   },
   methods: {

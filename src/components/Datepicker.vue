@@ -163,6 +163,10 @@ export default {
     required: {
       type: Boolean,
       default: false
+    },
+    customTranslations: {
+      type: Object,
+      default: null
     }
   },
   data () {
@@ -204,7 +208,12 @@ export default {
       return DateUtils.formatDate(new Date(this.selectedDate), this.format, this.translation)
     },
     translation () {
-      return DateLanguages.translations[this.language]
+      let translation = {days: {...DateLanguages.translations[this.language].days}, months: {...DateLanguages.translations[this.language].months}}
+      if (this.customTranslations && this.customTranslations[this.language]) {
+        translation.days = this.customTranslations[this.language].days
+        translation.months.abbr = [...this.customTranslations[this.language].months.abbr]
+      }
+      return translation
     },
     currMonthName () {
       const d = new Date(this.pageDate)
